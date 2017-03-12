@@ -6,6 +6,8 @@ Generalized Mean Values is preffered instead of 'min' and 'max' functions becaus
 Searching the game tree for optimal moves is done by exploring the tree and pick the path that correspond to Min and Max nodes depending on whose turn it is to play. When the tree is small it can be explored completely, so optimal play is possible but most interesting games have huge trees and an heursistic approximation is needed that minimax search with alpha-beta pruning may produce optimal play even though only a small fraction of the game tree is explored. The author in this chapter is presenting an optimized heuristic.
 
 This method use a "penalty" weight for the cost to descend one level, that bad moves are penalized more that good moves. The "penalty" is defined as the sum of the penalties of all the edges between current node and the root. The next expanded node is the node with the smallest penalty.
+
+The "min/max approximation" heuristic is special case of the penalty-based search method, where the penalties are defined in terms of the derivatives of the approximating functions. 
    
 - Searching by min/max approximation
 - Implementation

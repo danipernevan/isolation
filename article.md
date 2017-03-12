@@ -4,6 +4,8 @@ approximating the “min” and “max” operators. The approximation determine
 and finding that used scheme is superior to minmax search with alpha-beta pruning, although this scheme has more CPU overhead.
 
 - Generalized Mean Values 
+![derivative](img/derivate.jpg)
+
    
 - Game Tree Searching 
 - Iterative search heuristics details 

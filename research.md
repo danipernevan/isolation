@@ -12,7 +12,7 @@
     opp_moves = len(game.get_legal_moves(game.get_opponent(player)))
     return float(own_moves - 2 * opp_moves )
 ``` 
-![first heuristic](https://www.dropbox.com/s/0ij8bj50iqbclbp/score.jpg?dl=0)
+![first heuristic](https://drive.google.com/open?id=0B1KMcLg4kEHfcU9fTkViRkNCNFE)
 
 ### 2. own moves - 3 times opponent moves
 ```python

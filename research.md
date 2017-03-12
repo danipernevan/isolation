@@ -12,7 +12,45 @@
     opp_moves = len(game.get_legal_moves(game.get_opponent(player)))
     return float(own_moves - 2 * opp_moves )
 ``` 
-![first heuristic](/img/score.jpg)
+```
+*************************
+ Evaluating: ID_Improved 
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random            Result: 16 to 4
+  Match 2: ID_Improved vs   MM_Null           Result: 19 to 1
+  Match 3: ID_Improved vs   MM_Open           Result: 7 to 13
+  Match 4: ID_Improved vs MM_Improved         Result: 10 to 10
+  Match 5: ID_Improved vs   AB_Null           Result: 18 to 2
+  Match 6: ID_Improved vs   AB_Open           Result: 8 to 12
+  Match 7: ID_Improved vs AB_Improved         Result: 10 to 10
+
+
+Results:
+----------
+ID_Improved         62.86%
+
+*************************
+   Evaluating: Student   
+*************************
+
+Playing Matches:
+----------
+  Match 1:   Student   vs   Random            Result: 18 to 2
+  Match 2:   Student   vs   MM_Null           Result: 16 to 4
+  Match 3:   Student   vs   MM_Open           Result: 10 to 10
+  Match 4:   Student   vs MM_Improved         Result: 12 to 8
+  Match 5:   Student   vs   AB_Null           Result: 18 to 2
+  Match 6:   Student   vs   AB_Open           Result: 11 to 9
+  Match 7:   Student   vs AB_Improved         Result: 12 to 8
+
+
+Results:
+----------
+Student             69.29%
+```
 
 ### 2. own moves - 3 times opponent moves
 ```python

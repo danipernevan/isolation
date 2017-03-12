@@ -7,7 +7,9 @@ Searching the game tree for optimal moves is done by exploring the tree and pick
 
 This method use a "penalty" weight for the cost to descend one level, that bad moves are penalized more that good moves. The "penalty" is defined as the sum of the penalties of all the edges between current node and the root. The next expanded node is the node with the smallest penalty.
 
-The "min/max approximation" heuristic is special case of the penalty-based search method, where the penalties are defined in terms of the derivatives of the approximating functions. 
+The "min/max approximation" heuristic is special case of the penalty-based search method, where the penalties are defined in terms of the derivatives of the approximating functions. When p gets large, the heuristic should grow very deep but narrow trees and for small p, the heuristic should grow rather broad trees. 
+
+This heuristic is very cpu intensive but when computing the generalized means exactly, the play is improved. The benefits of min-max approximations can be seen from example that M<sub>10</sub>(35, 40) > M<sub>10</sub>(30, 40) although max(35, 40) = max(30, 40).
    
 - Searching by min/max approximation
 - Implementation

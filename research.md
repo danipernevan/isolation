@@ -1,6 +1,6 @@
 # heuristic analysis
 
-### 1. own moves - 2 times opponent moves 
+### 1. own moves - 2 times opponent moves   
 ```python
     if game.is_loser(player):
         return float("-inf")

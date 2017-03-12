@@ -9,32 +9,7 @@ This method use a "penalty" weight for the cost to descend one level, that bad m
 
 The "min/max approximation" heuristic is special case of the penalty-based search method, where the penalties are defined in terms of the derivatives of the approximating functions. When p gets large, the heuristic should grow very deep but narrow trees and for small p, the heuristic should grow rather broad trees. 
 
-This heuristic is very cpu intensive but when computing the generalized means exactly, the play is improved. The benefits of min-max approximations can be seen from example that M<sub>10</sub>(35, 40) > M<sub>10</sub>(30, 40) although max(35, 40) = max(30, 40).
-   
-- Searching by min/max approximation
-- Implementation
-- Experimental Results
-- The game: Connect-Four 
- - The static evaluator
- - Resource bounds 
- - Minimax search with alpha-beta pruning
- - Penalty-based heuristic 
- - Results
-TABLE 2. Experimental results
-Resource bound per turn MM wins AB wins Ties
-1 second 41 46 1 l
-2 second 40 42 16
-3 seconds 36 44 18
-4 seconds 39 52 7
-5 seconds 30 55 13
-Total 186 239 65
-1000 moves 47 35 16
-2000 moves 50 35 13
-3000 moves 42 47 9
-4000 moves 49 42 7
-5000 moves 61 31 6
-Total 249 190 51 
+This heuristic is very cpu intensive but when computing the generalized means exactly, the play is improved. The benefits of min-max approximations can be seen from example that M<sub>10</sub>(35, 40) > M<sub>10</sub>(30, 40) although max(35, 40) = max(30, 40). The
+min/max approximation pays attention to good backup or secondary moves.
 
- - Discussion
- - Open problems
- - Conclusion 
+The author conducted experiments consisting of 98 games with different bounds, limited time bound and limited moves bound. When the time was limited, Alpha-Beta was supperior, but when number of moves was limited, min/max approximation was superior. With the time bound, alpha-beta considered three times more distinct positions in the same amount of time. When the move operator is expensive to implement, the move-based comparison would be more relevant.

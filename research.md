@@ -12,7 +12,7 @@
     opp_moves = len(game.get_legal_moves(game.get_opponent(player)))
     return float(own_moves - 2 * opp_moves )
 ``` 
-![first heuristic](https://drive.google.com/open?id=0B1KMcLg4kEHfcU9fTkViRkNCNFE)
+![first heuristic](/img/score.jpg)
 
 ### 2. own moves - 3 times opponent moves
 ```python
@@ -26,7 +26,7 @@
     opp_moves = len(game.get_legal_moves(game.get_opponent(player)))
     return float(own_moves - 3 * opp_moves )
 ``` 
-![second heuristic](https://www.dropbox.com/s/mk42nk60ry0h7m1/3times.jpg?dl=0)
+![second heuristic](/img/3times.jpg)
 
 ### 3. own moves - 2 times opponent moves but avoid margin squares to not be trapped
 ```python
@@ -43,6 +43,6 @@
     opp_moves = len(game.get_legal_moves(game.get_opponent(player)))
     return float(own_moves - 2 * opp_moves - penalty_x - penalty_y)
 ``` 
-![third heuristic](https://www.dropbox.com/s/bccodtob08flm0v/avoid.jpg?dl=0)
+![third heuristic](/img/avoid.jpg)
 
 I finnaly chose the first heuristic because it is performing better due to observation and it is not very computational intensive

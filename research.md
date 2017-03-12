@@ -1,6 +1,6 @@
 # heuristic analysis
 
-### own moves - 2 times opponent moves 
+### 1. own moves - 2 times opponent moves 
 ```python
     if game.is_loser(player):
         return float("-inf")
@@ -14,7 +14,7 @@
 ``` 
 ![first heuristic](/img/score.jpg#right)
 
-### own moves - 3 times opponent moves
+### 2. own moves - 3 times opponent moves
 ```python
     if game.is_loser(player):
         return float("-inf")
@@ -28,7 +28,7 @@
 ``` 
 ![first heuristic](/img/3times.jpg#right)
 
-### own moves - 2 times opponent moves but avoid margin squares to not be trapped
+### 3. own moves - 2 times opponent moves but avoid margin squares to not be trapped
 ```python
     if game.is_loser(player):
         return float("-inf")
@@ -45,4 +45,4 @@
 ``` 
 ![first heuristic](/img/avoid.jpg#right)
 
-
+I finnaly chose the first heuristic because it is performing better due to observation and it is not very computational intensive

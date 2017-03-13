@@ -159,4 +159,8 @@ Results:
 Student             60.00%
 ```
 
-I finnaly chose the first heuristic because it is performing better due to observation and it is not very computational intensive
+I finnaly chose the first heuristic for the following reasons:
+  - it is less cpu intensive and the algorithm can explore more nodes in the time amount to find the best solution
+  - it beats "improved" heursistic by folowing a path to restrict opponend moves
+  - it make better move choices over second heuristic by focusing on own available moves not that much as restricting oponent moves
+  

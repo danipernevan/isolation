@@ -48,7 +48,7 @@ Air cargo problem 2 is best solved by h_ignore_preconditions even if it takes lo
 Air cargo problem 3 is best solved by h_ignore_preconditions.
 Action Plan length 12 :Load(C2, P2, JFK)	Fly(P2, JFK, ORD)	Load(C4, P2, ORD)	Fly(P2, ORD, SFO)	Unload(C4, P2, SFO)	Load(C1, P1, SFO)	Fly(P1, SFO, ATL)	Load(C3,P1, ATL)	Fly(P1, ATL, JFK)	Unload(C3, P1, JFK)	Unload(C2, P2, SFO)	Unload(C1, P1, JFK)
 
-![](img/planning_chart.png)
+![](https://github.com/danipernevan/isolation/blob/master/img/planning_chart.png)
 
 "ignore preconditions heuristic drops all preconditions from actions. Every action becomes applicable in every state, and any single goal fluent can be achieved in one step (if there is an applicable action — if not, the problem is impossible). This almost implies that the number of steps required to solve the relaxed problem is the number of unsatisfied goals—almost but not quite, because (1) some action may achieve multiple goals and (2) some actions may undo the effects of others. For many problems an accurate heuristic is obtained by considering (1) and ignoring (2). First, we relax the actions by removing all preconditions and all effects except those that are literals in the goal. Then, we count the minimum number of actions required such that the union of those actions' effects satisfies the goal" (Russell&Norvig 2003)
 

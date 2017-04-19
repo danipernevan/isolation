@@ -1,19 +1,19 @@
 #### Air Cargo Problem 1
-| Algorithm | Expansions | Goal Tests | New nodes | Exec. time |
+| Algorithm | Expansions | Goal Tests | New nodes | Plan length | Exec. time |
 | ------ | ------ | ------ | ------ | ------ |
-|breadth_first_search| 43 | 56 | 180 |  0.047907 |
-|breadth_first_tree_search|1458 | 1459 | 5960 | 1.425874 |
-|depth_first_graph_search | 12 |13|48 |  0.012796 |
-|depth_limited_search | 101 | 271 | 414 | 0.147167 |
-|uniform_cost_search | 55 | 57 | 224 | 0.059183 |
-|recursive_best_first_search with h_1 | 4229|4230|17029|4.214284|
-|greedy_best_first_graph_search with h_1 | 7| 9| 28 | 0.008175 |
-|astar_search with h_1 |  55| 57| 224 | 0.060421 |
-|astar_search with h_ignore_preconditions | 41 |43|170|0.047280|
-|astar_search with h_pg_levelsum | 41 |43 | 170 | 4.259263 |
+|breadth_first_search| 43 | 56 | 180 | 6 |  0.047907 |
+|breadth_first_tree_search|1458 | 1459 | 5960 | 6 | 1.425874 |
+|depth_first_graph_search | 12 |13|48 | 12 | 0.012796 |
+|depth_limited_search | 101 | 271 | 414 | 50 | 0.147167 |
+|uniform_cost_search | 55 | 57 | 224 | 6 | 0.059183 |
+|recursive_best_first_search with h_1 | 4229|4230|17029| 6 | 4.214284|
+|greedy_best_first_graph_search with h_1 | 7| 9| 28 | 6 | 0.008175 |
+|astar_search with h_1 |  55| 57| 224 | 6 | 0.060421 |
+|astar_search with h_ignore_preconditions | 41 |43|170| 6 |0.047280|
+|astar_search with h_pg_levelsum | 41 |43 | 170 | 6 | 4.259263 |
 
-Air cargo problem 1 is best solved by depth_first_graph_search with best time and fewer node expansions beside greedy_best_first_graph_search with h_1. A greedy approach is not optimal.
-Action plan length 12: Fly(P1, SFO, JFK)	Fly(P2, JFK, SFO)	Load(C1, P2, SFO)	Fly(P2, SFO, JFK)	Fly(P1, JFK, SFO)	Unload(C1, P2, JFK)	Fly(P2, JFK, SFO)	Fly(P1, SFO, JFK)	Load(C2, P1, JFK)	Fly(P2, SFO, JFK)	Fly(P1, JFK, SFO)	Unload(C2, P1, SFO)
+Air cargo problem 1 is best solved by breadth_first_search with best time and fewer node expansions beside greedy_best_first_graph_search with h_1. A greedy approach is not optimal.
+Action plan length 6: Load(C1, P1, SFO) Load(C2, P2, JFK) Fly(P1, SFO, JFK) Fly(P2, JFK, SFO) Unload(C1, P1, JFK) Unload(C2, P2, SFO)
 
 #### Air Cargo Problem 2
 | Algorithm | Expansions | Goal Tests | New nodes | Exec. time |
